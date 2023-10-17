@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Oxford VR Solutions</title>
-    </head>
+
+<!--head-->
+<head>
+    <meta charset="UTF-8">
+    <title>Oxford VR Solutions</title>
     
-    <body>
+    <!-- icons/fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,800&display=swap" rel="stylesheet">
+    
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- materialize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- jquery function initialization -->
+    <script>
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        });
+    </script>
+    
+    <!--css-->
+    <style>
+        li {
+            font-family: 'Kanit', sans-serif;
+        }
         
-    </body>
+        h2 {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<!--body-->
+<body>
+   <div class="row">
+       <h2>Frequently Asked Questions</h2>
+   </div>
+   
+   <!--collapsible list-->
+    <ul class="collapsible">
+        <li>
+            <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>What is virtual reality (VR)?</div>
+            <div class="collapsible-body"><span>VR is a projected simulation in which the player can interact with a computer-modeled 3D environment. The experience is crafted with the goal of intense engagement in a fake reality. VR uses technologies such as a head-mounted display (HMD) and motion sensor devices to create a feeling of full immersion.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Why is VR important?</div>
+            <div class="collapsible-body"><span>VR is important because it offers both an aid to existing life and a passageway for great technological advancement. For example, VR is used in many companies for training. If trainees work from home, their travel time is significantly reduced, they can learn at their own pace, and they can learn better from experiential learning not otherwise possible. In terms of the entertainment industry, VR pushes games to their limit. Players can insert themselves into the game like never before with VR’s enhanced interactivity. Virtual reality becomes increasingly important as we progress further into the digital age.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>What equipment do I need for VR?</div>
+            <div class="collapsible-body"><span>The most important component is the VR headset and accompanying controllers. Headsets have a large range of quality— some need to be hooked up to a PC (Oculus Rift, ≈$400) and some include all necessary hardware within the headset itself (Oculus Quest 2, ≈$300). For others, you can simply download an app on your smartphone and insert it within the headset (Google Cardboard, ≈$10). Next, you can use headphones for an immersive audio experience. More optional accessories include haptic gloves and vests, as well as omnidirectional VR treadmills.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>How did VR come to be?</div>
+            <div class="collapsible-body"><span>Designers have been trying to create an immersive media experience for hundreds of years. The invention of panoramas encouraged Fred Waller to research the importance of peripheral vision and led him to create a system of camera views on an arc-shaped screen. His 1939 creation would be used in WWII military training, a trend that has continued with each new generation of virtual reality. Morton Heilig is another inventor who focused on sensory experience, combining images, motion chairs, fans, and temperature changes to produce one cohesive simulated experience in 1962. Ivan Sutherland, an MIT computer scientist, created the first conventional example of VR in 1965, the head-mounted display. It featured a heavy appliance mounted on one’s head, supported by a suspension system, with goggles in front of the eyes and peripheral mirrors to showcase a computer display. While the display leaned more into augmented reality than virtual reality, the physical design of the HMD continues into today’s VR products.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Who is the target audience for VR?</div>
+            <div class="collapsible-body"><span>Based on growth trends, the largest audience for VR is currently gamers. Those falling into this category tend to be between 16 and 34 years of age and use VR at home for entertainment purposes. The use of VR in healthcare, though, is projected to grow a substantial amount.</span></div>
+        </li>
+    </ul>
+</body>
+
 </html>

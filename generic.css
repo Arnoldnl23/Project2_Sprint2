@@ -1,0 +1,48 @@
+body {margin: 0px; background-color: #505050;}
+
+header {
+	background-color:rgb(175,255,255); 
+	padding-bottom: 30px;
+    margin-top: 0px;
+    text-align: center;
+    color: black;
+    
+}
+
+header li {   
+    display: inline;	
+	padding: 20px;
+	margin: 0;
+	list-style: none;
+    font-size: 30px
+}
+
+header h2 {
+    padding: 20px 0px 0px 0px;
+    color: #505050;
+    margin-top: 0px;
+}
+
+h1 {
+	font-size: 3em;	
+	font-weight: bold;
+	padding: 20px 0px;
+    margin: 0px;
+	clear: both;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background-color:rgb(175,255,255); 
+    color: black;
+    padding: 0.5%;
+}
+
+p {
+    color: white;
+}
+
+h6 {
+    color: #505050
+}

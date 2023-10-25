@@ -10,6 +10,11 @@ header {
 
 header a {
     text-decoration: none;
+    color: #505050;
+}
+
+header a:hover {
+	color: purple;
 }
 
 header li {
@@ -23,7 +28,7 @@ header li {
 
 header h2 {
     font-family: 'Source Serif 4', sans-serif;
-    font-size: 1.5em;
+    font-size: 3em;
     font-weight: 800;
     color: #505050;
     padding: 20px 0px 0px 0px;

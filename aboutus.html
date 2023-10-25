@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oxford VR Solutions</title>
+    <link rel="stylesheet" href="generic.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        .column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 10px;
+            padding: 0 8px;
+        }
+
+        .card-deck {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 8px;
+            flex: 1 0 auto;
+        }
+
+        .img-size {
+            width: 100%;
+            height: 32vw;
+            object-fit: cover;
+        }
+
+        .text {
+            color: black;
+        }
+
+        .about-section {
+            padding: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            padding: 0 16px;
+        }
+
+        .container::after,
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="wrapper">
+        <header>
+            <h2>Oxford VR Solutions</h2>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Game_Info.html">VR in Games</a></li>
+                    <li><a href="Health_Info.html">VR in Health</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="#!">About Us</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="about-section">
+            <h2>About Us</h2>
+            <p>Some text about who we are and what we do.</p>
+        </div>
+
+        <div class="row">
+            <div class="card-deck">
+                <div class="column">
+                    <div class="card">
+                        <img src="sable1.jpg" class="img-size" alt="sable">
+                        <div class="container">
+                            <h2>Sable</h2>
+                            <p class="title">About Us Page Designer</p>
+                            <p class="text">Sable Jones is a first-year student at Miami University originally from western Pennsylvania.Their main focus is art, specifically character design and environmental rendering in a 2D format. They also enjoy writing and world-building.</p>
+                            <p>jonesic3@miamioh.edu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="noah1.jpg" class="img-size" alt="noah">
+                        <div class="container">
+                            <h2>Noah</h2>
+                            <p class="title">Home Page Designer</p>
+                            <p class="text">Noah Arnold is a freshman at Miami University from Fort Wayne,Indiana. His main focus is programming and game development. In his free time, he enjoys playing video games, reading the newest science fiction novels, and creating new encounters for his Dungeons and Dragons campaign. </p>
+                            <p>arnoldnl@miamioh.edu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="/reese1.jpg" class="img-size" alt="reese">
+                        <div class="container">
+                            <h2>Reese</h2>
+                            <p class="title">FAQ Page Designer</p>
+                            <p class="text">Reese is a first-year student at Miami University originally from southeastern Pennsylvania. Her main focus is art, specifically 2D rendering and character design, but she is also interested in computer programming. </p>
+                            <p>hausmar2@miamioh.edu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="kaleb1.jpg" class="img-size" alt="kaleb" \>
+                        <div class="container">
+                            <h2>Kaleb</h2>
+                            <p class="title">Information Page Designer</p>
+                            <p class="text">Kaleb Amirpour is a Miami University student looking to start his own game studio. He loves learning, tinkering in softwares, and solving puzzles. He also enjoys playing video and board games.</p>
+                            <p>amirpokr@miamioh.edu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="sean1.jpg" class="img-size" alt="sean">
+                        <div class="container">
+                            <h2>Sean</h2>
+                            <p class="title">Wireframe and Page Designerr</p>
+                            <p class="text">Sean is from Cincinnati, Ohio, and is a first-year first-gen student at Miami University. His main focus is 3D art for video games and has interest in other general game design. </p>
+                            <p>wedigsr@miamioh.edu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="jaleah1.jpg" class="img-size" alt="jaleah">
+                        <div class="container">
+                            <h2>Jaleah</h2>
+                            <p class="title">Contact Page Designer</p>
+                            <p class="text">Jaleah is a freshman at Miami University majoring in ETBD with a minor in Marketing.
+                                She has previously worked as a Marketing + Communications Intern at the Department of Neighborhoods of the City of Hamilton. Jaleah has also worked as a multimedia manager for the Pentecostal Faith Church. </p>
+                            <p>bracknjm@miamioh.edu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h6>&copy; Oxford VR Solutions </h6>
+        </footer>
+    </section>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</body></html>

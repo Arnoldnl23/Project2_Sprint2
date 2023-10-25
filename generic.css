@@ -4,8 +4,8 @@ body {
 }
 
 header {
-	background-color:rgb(175,255,255); 
-	padding-bottom: 30px;
+    background-color: rgb(175, 255, 255);
+    padding-bottom: 30px;
     margin-top: 0px;
     text-align: center;
     color: black;
@@ -14,19 +14,30 @@ header {
 header a {
     text-decoration: none;
     color: #505050;
+    font-weight: 800;
 }
 
 header a:hover {
-	color: purple;
+    background-color: #505050;
+    text-decoration: underline;
+    color: rgb(175, 255, 255);
+}
+
+header a:visited {
+    color: #909090;
+}
+
+header a:visited:hover {
+    color: #D7BDE2;
 }
 
 header li {
     font-family: 'Kanit', sans-serif;
     font-size: 30px;
-    display: inline;	
-	padding: 20px;
-	margin: 0;
-	list-style: none;
+    display: inline;
+    padding: 20px;
+    margin: 0;
+    list-style: none;
 }
 
 header h2 {
@@ -39,18 +50,18 @@ header h2 {
 }
 
 h1 {
-	font-family: 'Source Serif 4', sans-serif;
-    font-size: 3em;	
-	font-weight: 500;
-	padding: 20px 0px;
+    font-family: 'Source Serif 4', sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+    padding: 20px 0px;
     margin: 0px;
-	clear: both;
+    clear: both;
     color: white;
     text-align: center;
 }
 
 footer {
-    background-color:rgb(175,255,255); 
+    background-color: rgb(175, 255, 255);
     color: black;
     padding: 0.5%;
 }
@@ -58,8 +69,6 @@ footer {
 p {
     font-family: 'Kanit', sans-serif;
     color: white;
-    font-size: 1.5em;
-    padding: 0px 30px 0px 30px;
 }
 
 h6 {

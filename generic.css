@@ -8,6 +8,9 @@ header {
     color: black;
 }
 
+header a {
+ text-decoration: none; }
+
 header li {
     font-family: 'Kanit', sans-serif;
     font-size: 30px;

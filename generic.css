@@ -9,7 +9,8 @@ header {
 }
 
 header a {
- text-decoration: none; }
+    text-decoration: none;
+}
 
 header li {
     font-family: 'Kanit', sans-serif;

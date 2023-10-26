@@ -1,113 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Oxford VR Solutions</title>
 
-   <!DOCTYPE html>
-    <html lang="en">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,800&display=swap" rel="stylesheet">
+    <style>
+        .input-field {
+            color: white;
+            font-family: 'Kanit,''sans-serif';
+        }
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-        <title>Oxford VR Solutions</title>
-
-        <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,800&display=swap" rel="stylesheet">
-        <style>
-            .input-field {
-                color:white;
-                font-family: 'Kanit,' 'sans-serif';
-            }
-            
-            h2 {
-                color:white;
-                font-family: 'Source Serif 4,' 'sans-serif';
-            }
-        </style>
+        h2 {
+            color: white;
+            font-family: 'Source Serif 4,''sans-serif';
+        }
         
-        <link rel="stylesheet" href="generic.css">
-        
-        <!--  Scripts-->
-        
-        <script>
-           
-                $('.scrollspy').scrollSpy()
-    $('.datepicker').datepicker();
+        figcaption {
+            color: white;
+            font-family: 'Kanit,''sans-serif';
+            padding-left: 20px;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <link rel="stylesheet" href="generic.css">
 
-            });
+    <!--  Scripts-->
+    <script>
+        $('.scrollspy').scrollSpy()
+        $('.datepicker').datepicker();
+        });
+    </script>
+</head>
 
-        </script>
+<header>
+    <h2>Oxford VR Solutions</h2>
+    <div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Game_Info.html">VR in Games</a></li>
+            <li><a href="Health_Info.html">VR in Health</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </div>
+</header>
 
-    </head>
-
-      <header>
-            <h2>Oxford VR Solutions</h2>
-            <div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Game_Info.html">VR in Games</a></li>
-                <li><a href="Health_Info.html">VR in Health</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-            </ul>
-            </div>
-        </header>
-  <section id="contact" class="section section-contact scrollspy">
-               <h1 class="center">Contact Us</h1>
-                <div class="container">
-
-                    <div class="row">
-                        <form action="https://formsubmit.co/59bffdc5d851165884254759e9e5bd91" method="POST" class="col s12">
-                            <div class="row">
-
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <input id="icon_prefix" type="text" name="name" class="validate">
-                                    <label for="icon_prefix">Name</label>
-                                </div>
-
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix">email</i>
-                                    <input id="icon_prefix" type="text" name="email" class="validate">
-                                    <label for="icon_prefix">Email</label>
-                                </div>
-                                <div class="input-field col s6">
-                                    <i class="material-icons prefix">phone</i>
-                                    <input id="icon_telephone" type="tel" class="validate" name="phone">
-                                    <label for="icon_telephone">Telephone</label>
-                                </div>
-                               
-                                   <div class="input-field col s6">
-                                   <i class="material-icons prefix">date_range</i>
-                                    <input type="text" class="datepicker">
-                                    <label for="date_range">Best Date to Contact</label>
-                                </div>
-
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">message</i>
-                                    <textarea id="textarea1" class="materialize-textarea" name="comment"></textarea>
-                                    <label for="textarea1">Textarea</label>
-                                </div>
-
-                            </div>
-        
-
-                                 <input type="submit" value="Submit" class="#affaff btn-large" style="background-color: #affaff">
-                                
-                            
-                            
-                            
-                        </form>
+<section id="contact" class="section section-contact scrollspy">
+    <div class="container">
+        <div class="row">
+            <form action="https://formsubmit.co/59bffdc5d851165884254759e9e5bd91" method="POST" class="col s8">
+                <div class="row">
+                   <h1>Contact Us</h1>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" type="text" name="name" class="validate">
+                        <label for="icon_prefix">Name</label>
                     </div>
-      </div>
-        </section>
-        <br>
-                  <br>
-        <br>
-        <br>
-        <br>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="icon_prefix" type="text" name="email" class="validate">
+                        <label for="icon_prefix">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">phone</i>
+                        <input id="icon_telephone" type="tel" class="validate" name="phone">
+                        <label for="icon_telephone">Telephone</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">date_range</i>
+                        <input type="text" class="datepicker">
+                        <label for="date_range">Best Date to Contact</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">message</i>
+                        <textarea id="textarea1" class="materialize-textarea" name="comment"></textarea>
+                        <label for="textarea1">Textarea</label>
+                    </div>
+                <div class="col l12 m6 s12 white-text center-align">
+                    <input type="submit" value="Submit" class="#affaff btn-large center-align">
+                </div>
+                </div>
+            </form>
+            <div class="col s4">
+               <figure>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.254178652993!2d-84.73706642351415!3d39.50875261039998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884022c4d025ec71%3A0xfce7a4ae2c12bf0f!2sMiami%20University!5e0!3m2!1sen!2sus!4v1698329806642!5m2!1sen!2sus" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <figcaption>Located at Miami University.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
 
-           <footer>
-            <h6>&copy; Oxford VR Solutions </h6>
-        </footer>
+<footer>
+    <h6>&copy; Oxford VR Solutions </h6>
+</footer>
+
 </html>

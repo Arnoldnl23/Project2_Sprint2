@@ -17,11 +17,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Source+Serif+4:opsz,wght@8..60,500&display=swap');
-
         #statistics {
             float: left;
             padding-right: 15px;
+            width: 40%;
         }
         
         ol {
@@ -32,7 +31,26 @@
         #companies-list {
             color: white
         }
-
+        
+        .grid-container {
+            display: flex;
+            column-gap: 100px;
+        }
+        
+        .grid-item1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        
+        .grid-item1 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        
+        .row {
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 
@@ -54,24 +72,27 @@
         </header>
         <h1>Welcome to Oxford VR Solutions!</h1>
         <div class="row">
-        <div class="col s4 m4 l4">
-        <img src="vrStats.png" id="statistics" class="responsive-img">
+            <div class="col s4 m4 l4">
+                <img src="vrStats.png" id="statistics" class="responsive-img">
             </div>
-        <p class="flow-text">The virtual reality industry was valued at $25.21 billion in 2022 and is predicted to continue to grow in the coming years. Out of this, the VR hardware industry made $7.62 billion, the software industry $2.37 billion, and VR advertising made $151.23 million. All of these numbers are predicted to grow over the next 5 years. </p>
+            <div class="col s8 m8 l8">
+                <p class="flow-text">The virtual reality industry was valued at $25.21 billion in 2022 and is predicted to continue to grow in the coming years. Out of this, the VR hardware industry made $7.62 billion, the software industry $2.37 billion, and VR advertising made $151.23 million. All of these numbers are predicted to grow over the next 5 years. </p>
 
-        <p class="flow-text"> Companies have begun using VR in a variety of ways. One example can be seen in the oil companies BP and ExxonMobil, who both use VR to prepare the workers for the workplace. By using VR to simulate common workplace scenarios such as starting the machines and emergency protocols, this will reduce the likelihood of accidents occuring in the real world. Zimmer Biomet uses VR to show its customers the results of various surgical and dental routines, helping their customers make the best choices. This means that there is also a growth in the number of people needed to develop these simulations, contributing to the massive growth in the VR industry.</p>
+                <p class="flow-text"> Companies have begun using VR in a variety of ways. One example can be seen in the oil companies BP and ExxonMobil, who both use VR to prepare the workers for the workplace. By using VR to simulate common workplace scenarios such as starting the machines and emergency protocols, this will reduce the likelihood of accidents occuring in the real world. Zimmer Biomet uses VR to show its customers the results of various surgical and dental routines, helping their customers make the best choices. This means that there is also a growth in the number of people needed to develop these simulations, contributing to the massive growth in the VR industry.</p>
 
-        <p class="flow-text">Established companies such as Facebook (now known as Meta), Apple, and Microsoft have all begun to invest large amounts of money into VR and AR technologies, and companies such as Magic Leap and Niantic formed to take advantage of this growing industry. Companies such as Matterport will take scans of buildings, which people can then tour virtually from the comfort of their home. Companies have also begun exploring using VR to hold virtual meetings, as opposed to meeting in person or through other digital platforms such as Zoom.</p>
-    
+                <p class="flow-text">Established companies such as Facebook (now known as Meta), Apple, and Microsoft have all begun to invest large amounts of money into VR and AR technologies, and companies such as Magic Leap and Niantic formed to take advantage of this growing industry. Companies such as Matterport will take scans of buildings, which people can then tour virtually from the comfort of their home. Companies have also begun exploring using VR to hold virtual meetings, as opposed to meeting in person or through other digital platforms such as Zoom.</p>
+            </div>
         </div>
         <div class="row">
-            <div class="col s6 m6 l6">
-                <p class="flow-text">See the below video to see how Hilton uses VR as a tool to prepare their workforce for the work environment.</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/6KuL3QMgM84?si=IaBgGzCTP2tAMp_S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="col s6 m6 l6">
-                <img src="vrTraining.jpg" width="560" id="training">
-                <p class="flow-text">VR has even begun being used by the military and law enforcement as a tool for training, rather than spending money on real props and actors for training exercises.</p>
+            <div class="grid-container">
+                <div class="grid-item1">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/6KuL3QMgM84?si=IaBgGzCTP2tAMp_S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p class="flow-text">See the above video to see how Hilton uses VR as a tool to prepare their workforce for the work environment.</p>
+                </div>
+                <div class="grid-item2">
+                    <img src="vrTraining.jpg" height="315" width="100%" id="training">
+                    <p class="flow-text">VR has even begun being used by the military and law enforcement as a tool for training, rather than spending money on real props and actors for training exercises.</p>
+                </div>
             </div>
         </div>
         <h2 id="companies-list">Other Companies Using VR:</h2>

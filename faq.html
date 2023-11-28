@@ -22,30 +22,50 @@
     <!-- javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <!-- jquery function initialization -->
     <script>
-        $(document).ready(function() {
-            $('.collapsible').collapsible();
-        });
+        function toggle() {
+             //change plus or minus
+             if (this.getAttribute("class") == "plus") {
+                 this.setAttribute("class", "minus");
+             } else {
+                 this.setAttribute("class", "plus");
+             }
+             //open and close p text
+             if (this.nextElementSibling.getAttribute("class") == "closed") {
+                 this.nextElementSibling.setAttribute("class", "open");
+             } else {
+                 this.nextElementSibling.setAttribute("class", "closed");
+             }
+         }
+
+         window.onload = function() {
+             let h2s = document.getElementById("faq").getElementsByTagName("h2");
+             for (i = 0; i < h2s.length; i++) {
+                 h2s[i].onclick = toggle;
+             }
+         }
     </script>
 
     <!--my css-->
     <style> 
-        .collapsibleli {
-            font-family: 'Kanit', sans-serif;
-        }
-        
-
-        .collapsible-header {
-            background-color: #3C3C3C;
+        h2.plus, 
+        h2.minus {
             color: #ffffff;
             font-size: 1.5em;
+            padding-left: 100px;
+            background-color: #3C3C3C; 
         }
         
-        .collapsible-body {
-            background-color: #ffffff;
-            color: #000000;
-            font-size: 1.2em;
+        .plus {
+            background: url(faqImages/plus.png) no-repeat left center;
+            background-position: 5%;
+            background-size: 34px;
+        }
+        
+        .minus {
+            background: url(faqImages/minus.png) no-repeat left center;
+            background-position: 5%;
+            background-size: 34px;
         }
         
         img {
@@ -60,12 +80,24 @@
         
         iframe {
             padding-top: 20px;
+            height: 400px;
         }
         
         figcaption {
             color: white;
             font-size: 0.5em;
             text-align: center;
+        }
+
+        div.closed {
+	        display: none;
+        }
+        div.open {
+	        display: block;
+        }
+        
+        p {
+            margin-left: 10px;
         }
     </style>
 
@@ -94,30 +126,28 @@
 
     <!--row 1-->
     <div class="row">
-        <!--collapsible list-->
-        <div class="col m8">
-            <ul class="collapsible">
-                <li class="collapsibleli">
-                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>What is virtual reality (VR)?</div>
-                    <div class="collapsible-body"><span>VR is a projected simulation in which the player can interact with a computer-modeled 3D environment. The experience is crafted with the goal of intense engagement in a fake reality. VR uses technologies such as a head-mounted display (HMD) and motion sensor devices to create a feeling of full immersion.</span></div>
-                </li>
-                <li class="collapsibleli">
-                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Why is VR important?</div>
-                    <div class="collapsible-body"><span>VR is important because it offers both an aid to existing life and a passageway for great technological advancement. For example, VR is used in many companies for training. If trainees work from home, their travel time is significantly reduced, they can learn at their own pace, and they can learn better from experiential learning not otherwise possible. In terms of the entertainment industry, VR pushes games to their limit. Players can insert themselves into the game like never before with VR’s enhanced interactivity. Virtual reality becomes increasingly important as we progress further into the digital age.</span></div>
-                </li>
-                <li class="collapsibleli">
-                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>What equipment do I need for VR?</div>
-                    <div class="collapsible-body"><span>The most important component is the VR headset and accompanying controllers. Headsets have a large range of quality— some need to be hooked up to a PC (Oculus Rift, ≈$400) and some include all necessary hardware within the headset itself (Oculus Quest 2, ≈$300). For others, you can simply download an app on your smartphone and insert it within the headset (Google Cardboard, ≈$10). Next, you can use headphones for an immersive audio experience. More optional accessories include haptic gloves and vests, as well as omnidirectional VR treadmills.</span></div>
-                </li>
-                <li class="collapsibleli">
-                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>How did VR come to be?</div>
-                    <div class="collapsible-body"><span>Designers have been trying to create an immersive media experience for hundreds of years. The invention of panoramas encouraged Fred Waller to research the importance of peripheral vision and led him to create a system of camera views on an arc-shaped screen. His 1939 creation would be used in WWII military training, a trend that has continued with each new generation of virtual reality. Morton Heilig is another inventor who focused on sensory experience, combining images, motion chairs, fans, and temperature changes to produce one cohesive simulated experience in 1962. Ivan Sutherland, an MIT computer scientist, created the first conventional example of VR in 1965, the head-mounted display. It featured a heavy appliance mounted on one’s head, supported by a suspension system, with goggles in front of the eyes and peripheral mirrors to showcase a computer display. While the display leaned more into augmented reality than virtual reality, the physical design of the HMD continues into today’s VR products.</span></div>
-                </li>
-                <li class="collapsibleli">
-                    <div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>Who is the target audience for VR?</div>
-                    <div class="collapsible-body"><span>Based on growth trends, the largest audience for VR is currently gamers. Those falling into this category tend to be between 16 and 34 years of age and use VR at home for entertainment purposes. The use of VR in healthcare, though, is projected to grow a substantial amount.</span></div>
-                </li>
-            </ul>
+        <!--faq-->
+        <div class="col m8" id="faq">
+            <h2 class="plus">What is virtual reality (VR)?</h2>
+                <div class="closed">
+                    <p>VR is a projected simulation in which the player can interact with a computer-modeled 3D environment. The experience is crafted with the goal of intense engagement in a fake reality. VR uses technologies such as a head-mounted display (HMD) and motion sensor devices to create a feeling of full immersion.</p>
+                </div>
+            <h2 class="plus">Why is VR important?</h2>
+                <div class="closed">
+                    <p>VR is important because it offers both an aid to existing life and a passageway for great technological advancement. For example, VR is used in many companies for training. If trainees work from home, their travel time is significantly reduced, they can learn at their own pace, and they can learn better from experiential learning not otherwise possible. In terms of the entertainment industry, VR pushes games to their limit. Players can insert themselves into the game like never before with VR’s enhanced interactivity. Virtual reality becomes increasingly important as we progress further into the digital age.</p>
+                </div>
+            <h2 class="plus">What equipment do I need for VR?</h2>
+                <div class="closed">
+                    <p>The most important component is the VR headset and accompanying controllers. Headsets have a large range of quality— some need to be hooked up to a PC (Oculus Rift, ≈$400) and some include all necessary hardware within the headset itself (Oculus Quest 2, ≈$300). For others, you can simply download an app on your smartphone and insert it within the headset (Google Cardboard, ≈$10). Next, you can use headphones for an immersive audio experience. More optional accessories include haptic gloves and vests, as well as omnidirectional VR treadmills.</p>
+                </div>
+            <h2 class="plus">How did VR come to be?</h2>
+                <div class="closed">
+                    <p>Designers have been trying to create an immersive media experience for hundreds of years. The invention of panoramas encouraged Fred Waller to research the importance of peripheral vision and led him to create a system of camera views on an arc-shaped screen. His 1939 creation would be used in WWII military training, a trend that has continued with each new generation of virtual reality. Morton Heilig is another inventor who focused on sensory experience, combining images, motion chairs, fans, and temperature changes to produce one cohesive simulated experience in 1962. Ivan Sutherland, an MIT computer scientist, created the first conventional example of VR in 1965, the head-mounted display. It featured a heavy appliance mounted on one’s head, supported by a suspension system, with goggles in front of the eyes and peripheral mirrors to showcase a computer display. While the display leaned more into augmented reality than virtual reality, the physical design of the HMD continues into today’s VR products.</p>
+                </div>
+            <h2 class="plus">Who is the target audience for VR?</h2>
+                <div class="closed">
+                    <p>Based on growth trends, the largest audience for VR is currently gamers. Those falling into this category tend to be between 16 and 34 years of age and use VR at home for entertainment purposes. The use of VR in healthcare, though, is projected to grow a substantial amount.</p>
+                </div>
         </div>
         <!--video-->
         <div class="col m4">
@@ -156,11 +186,6 @@
             <figcaption><i><a href="https://unsplash.com/photos/metaverse-digital-cyber-world-technology-a-man-with-virtual-reality-vr-goggles-playing-augmented-reality-game-futuristic-lifestyle-_T4KorhLrNA">Image</a>: Unsplash+ / <a href="https://unsplash.com/plus/license">Unsplash+</a></i></figcaption>
             </figure>
         </div>
-    </div>
-    
-    <!--progress bar-->
-    <div class="progress">
-        <div class="indeterminate"></div>
     </div>
     
     <br>

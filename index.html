@@ -36,7 +36,7 @@
         }
 
         #companies-head {
-            color: white
+            color: white;
         }
 
         .row {
@@ -46,12 +46,74 @@
         .flow-text {
             font-size: 1.2em;
         }
+
+        .question {
+            color: white;
+            padding-bottom: 5px;
+            font-size: 1.4em;
+        }
+
+        span {
+            padding-right: 15px;
+            color: white;
+        }
+
+        button {
+            justify-content: center;
+            background: rgb(175, 255, 255);
+            border: none;
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.2em;
+            padding: 12px 28px;
+        }
+
+        .recommended {
+            font-family: 'Kanit', sans-serif;
+            color: white;
+        }
+
     </style>
 
     <script>
         $(document).ready(function() {
             $('.slider').slider();
         });
+
+        function recommendation() {
+            //input
+            var style = document.querySelector('input[name="question1"]:checked').value;
+            var controllers = document.querySelector('input[name = "question2"]:checked').value;
+            var boundaryBox = document.querySelector('input[name = "question3"]:checked').value;
+            var recommendationText;
+
+            //process
+            if (style == "option1") {
+                if (controllers == "option3") {
+                    if (boundaryBox == "option5") {
+                        recommendationText = "We recommend the Valve Index for $1,000";
+                    } 
+                    else {
+                        recommendationText = "We recommend the DPVR E4 for $549";
+                    }
+                } 
+                else {
+                    recommendationText = "We recommend the Vive Pro 2 for $800";
+                }
+            } else {
+                if (controllers == "option3") {
+                    if (boundaryBox == "option5") {
+                        recommendationText = "We recommend the Vive Pro 2 and Ultimate Tracker for $1,000";
+                    } else {
+                        recommendationText = "We recommend the Meta Quest 3 for $500";
+                    }
+                } else {
+                    recommendationText = "We recommend the Google Cardboard for about $15";
+                }
+            }
+
+            //output
+            document.getElementById("recommended").textContent = recommendationText;
+        }
 
     </script>
 
@@ -80,6 +142,7 @@
             <p class="flow-text"> Companies have begun using VR in a variety of ways. One example can be seen in the oil companies BP and ExxonMobil, who both use VR to prepare the workers for the workplace. By using VR to simulate common workplace scenarios such as starting the machines and emergency protocols, this will reduce the likelihood of accidents occuring in the real world. Zimmer Biomet uses VR to show its customers the results of various surgical and dental routines, helping their customers make the best choices. This means that there is also a growth in the number of people needed to develop these simulations, contributing to the massive growth in the VR industry.</p>
             <p class="flow-text">Established companies such as Facebook (now known as Meta), Apple, and Microsoft have all begun to invest large amounts of money into VR and AR technologies, and companies such as Magic Leap and Niantic formed to take advantage of this growing industry. Companies such as Matterport will take scans of buildings, which people can then tour virtually from the comfort of their home. Companies have also begun exploring using VR to hold virtual meetings, as opposed to meeting in person or through other digital platforms such as Zoom.</p>
         </div>
+
         <div class="row">
             <div class="col m6">
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/6KuL3QMgM84?si=IaBgGzCTP2tAMp_S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -88,6 +151,47 @@
             <div class="col m6">
                 <img src="vrTraining.jpg" height="315" width="100%" id="training">
                 <p class="flow-text">VR has even begun being used by the military and law enforcement as a tool for training, rather than spending money on real props and actors for training exercises.</p>
+            </div>
+        </div>
+
+        <div>
+            <h2 style="color: white; padding-bottom: 10px; text-align: center">Which Headset Should You Get?</h2>
+            <div class="row" style="text-align: center">
+                <h5 class="question">What style of headset do you want?</h5>
+                <label>
+                    <input type="radio" name="question1" class="with-gap" value="option1">
+                    <span>Tethered</span>
+                </label>
+                <label>
+                    <input type="radio" name="question1" class="with-gap" value="option2">
+                    <span>Standalone</span>
+                </label>
+            </div>
+            <div class="row" style="text-align: center">
+                <h5 class="question">Do you want controllers for your headset?</h5>
+                <label>
+                    <input type="radio" name="question2" class="with-gap" value="option3">
+                    <span>Yes</span>
+                </label>
+                <label>
+                    <input type="radio" name="question2" class="with-gap" value="option4">
+                    <span>No</span>
+                </label>
+            </div>
+            <div class="row" style="text-align: center">
+                <h5 class="question">Do you want a boundary box for your headset?</h5>
+                <label>
+                    <input type="radio" name="question3" class="with-gap" value="option5">
+                    <span>Yes</span>
+                </label>
+                <label>
+                    <input type="radio" name="question3" class="with-gap" value="option6">
+                    <span>No</span>
+                </label>
+            </div>
+            <div style="text-align: center">
+                <button onclick="recommendation()">Submit Choices</button>
+                <h4 id="recommended" style="color: white"></h4>
             </div>
         </div>
 

@@ -86,3 +86,15 @@ h5 {
     font-size: 1em;
     color: #505050;
 }
+
+#image_list li {
+    display: inline
+}
+
+/*.main {
+    float: left;
+}
+
+#slidetext {
+    float: right;
+}*/

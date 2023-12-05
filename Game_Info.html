@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Oxford VR Solutions</title>
+    <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,800&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -11,18 +11,23 @@
     <link rel="stylesheet" href="generic.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.sidenav').sidenav();
-            $('.slider').slider({
-                indicators: false,
-                duration: 500,
-                interval: 4000,
-                height: screen.height / 2
-            });
-            $('.parallax').parallax();
-        });
+        window.onload = function() {
+            let links = document.getElementById("slideshow").getElementsByClassName("slide");
+            let count = 0;
+            let timer = setInterval(function() {
+                count = (count + 1) % links.length;
+                document.getElementById("SlideshowImage").src = links[count].href;
+                document.getElementById("SlideshowText").innerHTML = links[count].nextElementSibling.innerHTML;
+            }, 2000);
+        }
 
     </script>
+    <style>
+        .parallax-container {
+            height: "100%";
+        }
+
+    </style>
 </head>
 
 <body>
@@ -39,13 +44,40 @@
             </ul>
         </div>
     </header>
-    <div class="slider">
-        <ul class="slides">
+    <h1>Applications of VR in Games</h1>
+    <div>
+        <ul id="slideshow" style="display:none">
+            <li><a class="slide" href="xr-expo-ipDhOQ5gtEk-unsplash.jpg"></a>
+                <p>Photo by <a href="https://unsplash.com/@xrexpo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">XR Expo</a> on <a href="https://unsplash.com/photos/man-in-black-jacket-holding-blue-and-white-plastic-cup-ipDhOQ5gtEk">Unsplash</a></p>
+            </li>
+
+            <li><a class="slide" href="stem-t4l-l862hX_FET8-unsplash-copy.jpg"></a>
+                <p>Photo by <a href="https://unsplash.com/@stem_t4l?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">stem.T4L</a> on <a href="https://unsplash.com/photos/boy-and-girl-uses-vr-goggles-in-front-hot-air-balloons-wallpaper-l862hX_FET8">Unsplash</a></p>
+            </li>
+
+            <li><a class="slide" href="christine-sandu-VU3Gmeks-LY-unsplash-copy.jpg"></a>
+                <p> Photo by <a href="https://unsplash.com/@lenscapewithme?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Christine Sandu</a> on <a href="https://unsplash.com/photos/person-holding-black-camera-lens-VU3Gmeks-LY">Unsplash</a></p>
+            </li>
+
+            <li><a class="slide" href="david-dvoracek-GLgjpN4MWaw-unsplash_edited-copy.jpg"></a>
+                <p> Photo by <a href="https://unsplash.com/@dafidvor?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">David Dvořáček</a> on <a href="https://unsplash.com/photos/man-playing-using-vr-headset-GLgjpN4MWaw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
+            </li>
+        </ul>
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                    <img src="xr-expo-ipDhOQ5gtEk-unsplash.jpg" id="SlideshowImage" class="col s8 m8 l8 offset-s2 offset-m2 offset-l2" style="height=50%">
+                </div>
+                <p id="SlideshowText" style="text-align: center">Photo by <a href="https://unsplash.com/@xrexpo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">XR Expo</a> on <a href="https://unsplash.com/photos/man-in-black-jacket-holding-blue-and-white-plastic-cup-ipDhOQ5gtEk">Unsplash</a></p>
+        </div>
+
+        <!-- Ignore these 
+           <ul>
             <li>
                 <img src="xr-expo-ipDhOQ5gtEk-unsplash.jpg" height="10%">
                 <div class="caption right-align">
                     <p class="attribution"><br><br><br><br><br><br><br><br><br><br><br><br> Photo by <a href="https://unsplash.com/@xrexpo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">XR Expo</a> on <a href="https://unsplash.com/photos/man-in-black-jacket-holding-blue-and-white-plastic-cup-ipDhOQ5gtEk">Unsplash</a></p>
-                </div> <!-- random image -->
+                </div>
             </li>
             <li>
                 <img src="stem-t4l-l862hX_FET8-unsplash.jpg">
@@ -66,17 +98,16 @@
                 </div>
             </li>
         </ul>
-    </div>
-    <h1>Applications of VR in Games</h1>
-    <p>
-        The invention of virtual reality has revolutionized the type of games we as humans are now able to play. We are now able to play games that are more immersive than ever before. This is because VR allows us to transport players into a digital world displayed through VR headsets. Not only does this enhance the realism of first person games, but it makes the player feel as though they embody their character. VR also allows for much more tactile controls in games. Instead of pulling a trigger or pressing a key on a keyboard to perform an action, players can now actually perform that action with their hands in the game. This allows for players to actually feel like they are doing an action instead of just instructing their character to perform it. This has allowed games to implement much more realistic shooting and combat mechanics.
-    </p>
-    <p>
-        Virtual reality is also being used in arcades to provide location-based gameplay experiences. These experiences are usually made for multiple players and use cutting edge hardware to allow players to play VR games together in a shared space. These experiences are designed so players can walk around freely and are not constrained by the physical space they are in, like they would be at their house. These games may also have alternate controllers meant to interface with arcade VR games, such as physical gun models that the player uses to control the virtual gun they are holding in the game. These virtual reality experiences are best enjoyed with friends. They allow players to operate in the same physical and virtual space, which lets players to experience a greater form of comradery with their companions, and adds to the realism of the gameplay. Overall, these factors combine to make VR arcades an engaging and entertaining experience for players.
-    </p>
-    <footer>
-            <h5>&copy; Oxford VR Solutions | <a href="https://miamioh.edu/">Miami University Home Page</a> | <a href="aboutus.html">About Us</a></h5>
-    </footer>
+    </div>-->
+        <p>
+            The invention of virtual reality has revolutionized the type of games we as humans are now able to play. We are now able to play games that are more immersive than ever before. This is because VR allows us to transport players into a digital world displayed through VR headsets. Not only does this enhance the realism of first person games, but it makes the player feel as though they embody their character. VR also allows for much more tactile controls in games. Instead of pulling a trigger or pressing a key on a keyboard to perform an action, players can now actually perform that action with their hands in the game. This allows for players to actually feel like they are doing an action instead of just instructing their character to perform it. This has allowed games to implement much more realistic shooting and combat mechanics.
+        </p>
+        <p>
+            Virtual reality is also being used in arcades to provide location-based gameplay experiences. These experiences are usually made for multiple players and use cutting edge hardware to allow players to play VR games together in a shared space. These experiences are designed so players can walk around freely and are not constrained by the physical space they are in, like they would be at their house. These games may also have alternate controllers meant to interface with arcade VR games, such as physical gun models that the player uses to control the virtual gun they are holding in the game. These virtual reality experiences are best enjoyed with friends. They allow players to operate in the same physical and virtual space, which lets players to experience a greater form of comradery with their companions, and adds to the realism of the gameplay. Overall, these factors combine to make VR arcades an engaging and entertaining experience for players.
+        </p>
+        <footer>
+            <h6>&copy; Oxford VR Solutions </h6>
+        </footer>
 
 </body>
 

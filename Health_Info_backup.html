@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Oxford VR Solutions</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Source+Serif+4:opsz,wght@8..60,500;8..60,800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="generic.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <style>
+        .image {
+
+            margin: 0px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.materialboxed').materialbox();
+        });
+
+
+        /*
+         window.onload = function() {
+                 let links = document.getElementById("image_list").getElementsByTagName("a");
+                 let count = 0;
+                 let timer = setInterval(function() {
+                     count = (count + 1) % links.length;
+                    document.getElementById("slideshowtitle").innerHTML = links[count].title;
+                     document.getElementById("slideshowimage").src = links[count].href;
+                      document.getElementById("slideshowcaption").innerHTML = links[count].cap;
+                     document.getElementById("slideshowtext").innerHTML = links[count].text;
+                 }, 3000);
+         }
+         */
+
+        //toggle the +/- signs and open/close the text :3
+
+
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+            $('.slider').slider();
+            //$('.slider').slider({fullWidth: true, indicators: false, height: 500, interval: 6000});
+            $('.scrollspy').scrollSpy()
+        });
+
+
+        function swap(evt) {
+            document.getElementById("image").src = this.getAttribute("href");
+            //  document.getElementById("image").setAttribute("src", this.getAttribute("href"))
+            document.getElementById("caption").innerHTML = this.getAttribute("title");
+            document.getElementById("imgcap").innerHTML = this.getAttribute("icap");
+            document.getElementById("slidetext").innerHTML = this.getAttribute("text");
+            //Cancel the default action of a click event for hyperlinked items.  
+            //if(!evt) {evt=window.event;} 
+            if (evt.preventDefault) {
+                evt.preventDefault();
+            } else {
+                evt.returnValue = false;
+            }
+        }
+
+        window.onload = function() {
+            //image swap
+            let images = document.getElementById("image_list").getElementsByTagName("a");
+            for (i = 0; i < images.length; i++) {
+                images[i].onclick = swap;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h2>Oxford VR Solutions</h2>
+        <div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Game_Info.html">VR in Games</a></li>
+                <li><a href="Health_Info.html">VR in Health</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <h1>Applications of VR in Healthcare</h1>
+    <!--<div class="main">-->
+    <h2 id="caption">Recovery</h2>
+    <p><img src="young.jpg" width=50% height=40% alt="" id="image"></p>
+    <ul id="image_list">
+        <li><a href="young.jpg" title="Recovery" id="first_link"  icap="Image by Freepik" text="The use of VR in the medical field allows for the creation of self-guided rehabilitation programs where patients would be able to do physical therapy at home. This opens up new avenues of rehabilitation for patients unable to leave their home, while also allowing doctors to interact with patients without ever having to come into the office, while still being able to conduct tests for things like motor impairments. Using VR in this way also allows for a speedier recovery by bringing fun into a normally strenuous or dull exercise task. This could help patients with long-term physical therapy, as the environment in VR can help keep their spirits high.">
+                <img src="young.jpg" width=10% height=8% alt=""></a></li>
+        <li><a href="femaledoctor.jpg" title="Training" icap="Image by Racool_studio on Freepik" text="VR can also be used to train doctors and nurses in healthcare better than any standard teachings could. VR programs have been created that allow healthcare professionals to experience simulated versions of different conditions. This creates a bond of empathy between a doctor and their patient as the doctor would be able to understand what the patient is going through to a degree. Along with this, VR allows surgical training using interactive digital models that can be practiced over and over again to get it right, unlike usual training in which a cadaver’s organs can only be used once in training before a new one is needed. This saves both time and money for medical institutions as they would no longer have to find ways to buy cadaver for training. Research shows that a 230% increase in surgical performance has been noted with this type of training than traditional methods.">
+                <img src="femaledoctor.jpg" width=10% height=8% alt=""></a></li>
+        <li><a href="doctorvrsim.jpg" title="Visualization" icap="Image by rawpixel.com on Freepik" text="This technology does not only help doctors and nurses, but also the patients themselves. Using VR, doctors are able to show a patient exactly what needs to be seen for their condition in a far more detailed manner than on a computer screen or physical model, such as an injury visible on an x-ray that would now be able to be projected into a VR headset and moved to show each part of the bone in detail. This also aids in training as it is a much more advanced way of understanding and visualizing human anatomy.">
+                <img src="doctorvrsim.jpg" width=10% height=8% alt=""></a></li>
+    </ul>
+    <!--</div>-->
+    <p id="imgcap">Image by Freepik</p>
+    <p id="slidetext">The use of VR in the medical field allows for the creation of self-guided rehabilitation programs where patients would be able to do physical therapy at home. This opens up new avenues of rehabilitation for patients unable to leave their home, while also allowing doctors to interact with patients without ever having to come into the office, while still being able to conduct tests for things like motor impairments. Using VR in this way also allows for a speedier recovery by bringing fun into a normally strenuous or dull exercise task. This could help patients with long-term physical therapy, as the environment in VR can help keep their spirits high.</p>
+    <footer>
+        <h5>&copy; Oxford VR Solutions | <a href="https://miamioh.edu/">Miami University Home Page</a> | <a href="aboutus.html">About Us</a></h5>
+    </footer>
+</body>
+
+</html>
